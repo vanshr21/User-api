@@ -11,7 +11,7 @@ import java.io.IOException;
 public class AuthorizationInteceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws IOException {
-        System.out.println("AuthorizationInterceptor");
+
         String role = request.getHeader("role");
 
         if (("DELETE".equals(request.getMethod()) || "PATCH".equals(request.getMethod()))

@@ -21,7 +21,6 @@ public class LoggingFilter implements Filter {
 
         long startTime = System.currentTimeMillis();
         logger.info("Incoming Request : method={}, path={}, ip={}", httpRequest.getMethod(), httpRequest.getRequestURI(), httpRequest.getRemoteAddr());
-        System.out.println("LOGGING FILTER IS EXECUTING!");
         try {
             chain.doFilter(request, response);
         } finally {

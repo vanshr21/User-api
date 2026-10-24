@@ -13,7 +13,6 @@ public class ExecutionTimeInterceptor implements HandlerInterceptor {
     private final Logger logger = LoggerFactory.getLogger(ExecutionTimeInterceptor.class);
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
-        System.out.println("ExecutionTimeInterceptor");
         Long currTime = System.currentTimeMillis();
         request.setAttribute("currTime", currTime);
         return true;
